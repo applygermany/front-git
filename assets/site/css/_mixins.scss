@@ -1,0 +1,111 @@
+// Box Shadow
+@mixin boxshadow($opacity: 0.1, $x: 0px, $y: 0px, $smooth: 15px) {
+  box-shadow: $x $y $smooth rgba(0, 0, 0, $opacity);
+}
+
+@mixin xy-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin fbx-ai-start-jc-start {
+  display: flex;
+}
+
+@mixin fbx-ai-center-jc-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fbx-ai-center-jc-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin fbx-ai-center-jc-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin fbx-ai-center-jc-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin fbx-ai-start-jc-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin fbx-column-ai-center-jc-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fbx-column-ai-start-jc-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@mixin fbx-column-ai-end-jc-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@mixin fbx-column-ai-start-jc-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@mixin tablet-device {
+  // Medium devices (tablets, less than 992px)
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    @content
+  }
+}
+
+@mixin mobile-device {
+  // Small devices (landscape phones, less than 768px)
+  @media (max-width: 767.98px) {
+    @content
+  }
+}
+
+@mixin large-device {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin extra-large-device {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin middle-extra-large-device {
+  @media (min-width: 1400px) and (max-width: 1520px) {
+    @content;
+  }
+}
+
+@mixin extra-extra-large-device {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}

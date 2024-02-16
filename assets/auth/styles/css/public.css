@@ -1,0 +1,789 @@
+html,
+body,
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'iransansxv';
+  src: url("/auth/fonts/iransans/IRANSansXV.woff") format("woff-variations"), url("/auth/fonts/iransans/IRANSansXV.woff") format("woff");
+  /* for the other supporting browsers */
+  font-weight: 100 900;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: iransansx;
+  src: url("/auth/fonts/iransans/IRANSansX-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: iransansx;
+  src: url("/auth/fonts/iransans/IRANSansX-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+body {
+  font-family: iransansx !important;
+  font-feature-settings: "ss02";
+}
+
+h1, h2, h3, h4, h5, h6, input, textarea, button, select {
+  font-family: iransansx !important;
+  font-feature-settings: "ss02";
+}
+
+h1 {
+  font-weight: bold;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: 'iransansxv' !important;
+    font-feature-settings: "ss02";
+  }
+  h1, h2, h3, h4, h5, h6, input, textarea {
+    font-family: 'iransansxv' !important;
+    font-feature-settings: "ss02";
+  }
+}
+
+.uk-container {
+  max-width: 1366px !important;
+}
+
+.loading-button {
+  font-size: 0.9rem;
+  background-color: rgba(241, 240, 240, 0.6);
+  padding: 1rem;
+  border: 0;
+  width: fit-content;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .loading-button {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .loading-button {
+    padding: 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+.header-auth {
+  background-image: url("/auth/images/auth/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-right: 12rem;
+  padding-left: 12rem;
+}
+
+.header-auth > .uk-container {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.header-auth .top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.header-auth .top .go-login p {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.header-auth .top .go-login p a {
+  color: #FFE163;
+  text-decoration: none;
+  border-bottom: 1px solid #FFE163;
+}
+
+.header-auth .top .logo {
+  text-align: left;
+}
+
+.header-auth .top .logo img {
+  width: 90%;
+}
+
+.header-auth .title {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.header-auth .title h1 {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.header-auth .title p {
+  font-size: 0.9rem;
+  color: #FFE163;
+}
+
+.header-auth .register-2, .header-auth .reset-password-2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+
+.header-auth .register-2 .title, .header-auth .reset-password-2 .title {
+  width: 50%;
+}
+
+@media (max-width: 767.98px) {
+  .header-auth .register-2, .header-auth .reset-password-2 {
+    display: block;
+  }
+  .header-auth .register-2 .title, .header-auth .reset-password-2 .title {
+    width: inherit;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .header-auth .register-2 .title, .header-auth .reset-password-2 .title {
+    width: inherit;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header-auth .register-2 .title, .header-auth .reset-password-2 .title {
+    width: inherit;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header-auth {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .header-auth .top {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .header-auth .top .go-login {
+    order: 1;
+  }
+  .header-auth .top .go-login p {
+    font-size: 0.75rem;
+  }
+  .header-auth .top .logo {
+    text-align: center;
+    order: 0;
+    margin-bottom: 1.5rem;
+  }
+  .header-auth .top .logo img {
+    width: 80%;
+  }
+  .header-auth .title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .header-auth .title h1 {
+    font-size: 1.2rem;
+  }
+  .header-auth .title p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .header-auth {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  .header-auth .top {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .header-auth .top .go-login p {
+    font-size: 0.8rem;
+  }
+  .header-auth .title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .header-auth .title h1 {
+    font-size: 1.2rem;
+  }
+  .header-auth .title p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header-auth {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+}
+
+.auth {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-right: 12rem;
+  padding-left: 12rem;
+}
+
+.auth .background {
+  margin-top: -6rem;
+  width: 52%;
+}
+
+.auth .form {
+  width: 38%;
+  margin-top: 2rem;
+}
+
+.auth .form form {
+  width: 100%;
+}
+
+.auth .form form .form-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.auth .form form .form-group input,
+.auth .form form .form-group select {
+  width: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.auth .form form .form-group input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #ACAC9D;
+  transition: 0.2s ease-in;
+}
+
+.auth .form form .form-group input:focus, .auth .form form .form-group select:focus {
+  outline: 1px solid var(--main-color)!important;
+}
+
+.auth .form form .form-group .floating {
+  top: 1.4rem;
+  right: 5%;
+  position: absolute;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background-color: white;
+  color: #ACAC9D;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.auth .form form .form-group .error {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: red;
+}
+
+.auth .form form .form-group input:focus ~ label, .auth .form form .form-group input:not(:placeholder-shown) ~ label {
+  top: -12%;
+  padding: 0 0.5rem;
+}
+
+.auth .form form .forget-password {
+  margin-bottom: 2.5rem;
+}
+
+.auth .form form .forget-password a {
+  color: #E2AD42;
+  text-decoration: none;
+  border-bottom: 1px solid #FFE163;
+  font-size: 0.9rem;
+}
+
+.auth .form form .code {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  direction: ltr;
+}
+
+.auth .form form .code input {
+  background-color: white;
+  border-radius: 5px;
+  width: 18%;
+  height: 4rem;
+  padding: 0;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.auth .form form .code input[type=number] {
+  -webkit-appearance: none;
+}
+
+.auth .form form .code input::-webkit-outer-spin-button,
+.auth .form form .code input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.auth .form form .error-code {
+  font-size: 0.9rem;
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.auth .form form .counter-wrong-number {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.auth .form form .counter-wrong-number p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.auth .form form .counter-wrong-number p a {
+  text-decoration: none;
+  color: #E2AD42;
+  border-bottom: 1px solid #E2AD42;
+}
+
+.auth .form form .counter-wrong-number .counter span {
+  font-size: 0.9rem;
+}
+
+.auth .form form .submit button {
+  font-size: 0.9rem;
+  background-color: #F1F0F0;
+  padding: 1rem;
+  border: 0;
+  border-radius: 5px;
+  width: 40%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.auth .form form .submit button:hover {
+  background-color: #FFE163;
+}
+
+@media (max-width: 767.98px) {
+  .auth {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .auth .background {
+    display: none;
+  }
+  .auth .form {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  .auth .form form .form-group input,
+  .auth .form form .form-group select {
+    width: calc(100% - 1.5rem);
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+  .auth .form form .form-group input::placeholder {
+    font-size: 0.75rem;
+  }
+  .auth .form form .form-group .error {
+    font-size: 0.75rem;
+  }
+  .auth .form form .form-group .floating {
+    font-size: 0.75rem;
+  }
+  .auth .form form .forget-password {
+    margin-bottom: 2rem;
+  }
+  .auth .form form .forget-password a {
+    font-size: 0.75rem;
+  }
+  .auth .form form .code input {
+    width: 10%;
+    height: 2rem;
+  }
+  .auth .form form .counter-wrong-number {
+    margin-bottom: 1.5rem;
+  }
+  .auth .form form .counter-wrong-number p {
+    font-size: 0.75rem;
+  }
+  .auth .form form .counter-wrong-number .counter span {
+    font-size: 0.75rem;
+  }
+  .auth .form form .error-code {
+    font-size: 0.75rem;
+  }
+  .auth .form form .submit button {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .auth {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  .auth .background {
+    margin-top: -3rem;
+  }
+  .auth .form form .form-group input,
+  .auth .form form .form-group select {
+    width: 80%;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+  .auth .form form .form-group .error {
+    font-size: 0.75rem;
+  }
+  .auth .form form .forget-password {
+    margin-bottom: 2rem;
+  }
+  .auth .form form .forget-password a {
+    font-size: 0.8rem;
+  }
+  .auth .form form .code input {
+    width: 10%;
+    height: 2rem;
+  }
+  .auth .form form .counter-wrong-number {
+    margin-bottom: 1.5rem;
+  }
+  .auth .form form .counter-wrong-number p {
+    font-size: 0.8rem;
+  }
+  .auth .form form .counter-wrong-number .counter span {
+    font-size: 0.8rem;
+  }
+  .auth .form form .error-code {
+    font-size: 0.75rem;
+  }
+  .auth .form form .submit button {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .auth {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+  .auth .form form .submit button {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+    width: 40%;
+  }
+}
+
+.register-2 .form form .submit, .reset-password-2 .form form .submit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .register-2 .form form .submit, .reset-password-2 .form form .submit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .register-2 .form, .reset-password-2 .form {
+    width: 48%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .register-2 .form, .reset-password-2 .form {
+    width: 48%;
+  }
+}
+
+#forget-password-modal .uk-modal-body {
+  padding: 0;
+  border-radius: 15px;
+}
+
+#forget-password-modal .uk-modal-body .title {
+  background-image: url("/auth/images/auth/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+  padding: 2rem;
+}
+
+#forget-password-modal .uk-modal-body .form form {
+  text-align: center;
+  padding: 3rem;
+}
+
+#forget-password-modal .uk-modal-body .form form .form-group {
+  width: 80%;
+  margin-bottom: 3rem;
+  position: relative;
+  width: 100%;
+}
+
+#forget-password-modal .uk-modal-body .form form .form-group input {
+  width: calc(99.5% - 2rem);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+#forget-password-modal .uk-modal-body .form form .form-group input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #ACAC9D;
+  transition: 0.2s ease-in;
+}
+
+#forget-password-modal .uk-modal-body .form form .form-group input:focus, #forget-password-modal .uk-modal-body .form form .form-group select:focus {
+  outline-color: #FFE163;
+}
+
+#forget-password-modal .uk-modal-body .form form .form-group .floating {
+  top: 40%;
+  right: 5%;
+  position: absolute;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background-color: white;
+  color: #ACAC9D;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+#forget-password-modal .uk-modal-body .form form .form-group input:focus ~ label {
+  top: -12%;
+  padding: 0 0.5rem;
+}
+
+#forget-password-modal .uk-modal-body .form form .submit {
+  margin-bottom: 0;
+}
+
+#forget-password-modal .uk-modal-body .form form .submit button {
+  font-size: 0.9rem;
+  background-color: #F1F0F0;
+  padding: 1rem;
+  border: 0;
+  border-radius: 5px;
+  width: 40%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#forget-password-modal .uk-modal-body .form form .submit button:hover {
+  background-color: #FFE163;
+}
+
+#forget-password-modal .uk-modal-body .level-2 {
+  display: none;
+}
+
+#forget-password-modal .uk-modal-body .level-2 .text {
+  padding: 3rem;
+  text-align: center;
+}
+
+#forget-password-modal .uk-modal-body .level-2 .text p {
+  color: black;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767.98px) {
+  #forget-password-modal .uk-modal-body .title {
+    padding: 1.5rem;
+  }
+  #forget-password-modal .uk-modal-body .title img {
+    width: 60%;
+  }
+  #forget-password-modal .uk-modal-body .form form {
+    padding: 1.5rem;
+  }
+  #forget-password-modal .uk-modal-body .form form .form-group input {
+    width: calc(100% - 1.5rem);
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+  #forget-password-modal .uk-modal-body .form form .form-group input::placeholder {
+    font-size: 0.75rem;
+  }
+  #forget-password-modal .uk-modal-body .form form .form-group .floating {
+    font-size: 0.75rem;
+  }
+  #forget-password-modal .uk-modal-body .form form .submit button {
+    width: 60%;
+    font-size: 0.75rem;
+    padding: 0.75rem;
+  }
+  #forget-password-modal .uk-modal-body .level-2 .text {
+    padding: 1.5rem;
+  }
+  #forget-password-modal .uk-modal-body .level-2 .text p {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #forget-password-modal .uk-modal-body .form form {
+    padding: 2rem;
+  }
+  #forget-password-modal .uk-modal-body .form form .form-group input {
+    width: calc(100% - 1.5rem);
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+  #forget-password-modal .uk-modal-body .form form .form-group input::placeholder {
+    font-size: 0.8rem;
+  }
+  #forget-password-modal .uk-modal-body .form form .form-group .floating {
+    font-size: 0.8rem;
+  }
+  #forget-password-modal .uk-modal-body .form form .submit button {
+    width: 60%;
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+  #forget-password-modal .uk-modal-body .level-2 .text {
+    padding: 2rem;
+  }
+  #forget-password-modal .uk-modal-body .level-2 .text p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  direction: rtl;
+  text-align: right;
+  background-color: white !important;
+  font-size: 16px;
+}
+
+main.blur, footer.blur {
+  filter: blur(2px);
+}

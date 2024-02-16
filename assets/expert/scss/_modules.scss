@@ -1,0 +1,27 @@
+@import "~/assets/expert/scss/reset";
+@import "~/assets/expert/scss/font";
+// @import "~uikit/dist/css/uikit-rtl.min.css";
+@import "~/assets/expert/scss/mixins";
+@import "~/assets/expert/scss/global";
+//-----------------------------------------------------------------
+//Components
+@import "~/assets/expert/scss/components/UK";
+@import "~/assets/expert/scss/components/header";
+// @import "~/assets/expert/scss/components/sidebar";
+@import "~/assets/expert/scss/components/table";
+@import "~/assets/expert/scss/components/page-title";
+@import "~/assets/expert/scss/components/dark-mode";
+// @import "~/assets/expert/scss/components/custom-select";
+@import "~/assets/expert/scss/components/upload";
+
+//-----------------------------------------------------------------
+//Pages
+// @import "./pages/apply-status";
+// @import "./pages/resume";
+// @import "./pages/user-duty";
+// @import "./pages/select-university";
+// @import "./pages/user-document";
+// @import "./pages/process";
+// @import "./pages/consulting-history";
+// @import "./pages/consulting";
+// @import "./pages/user-list";

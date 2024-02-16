@@ -1,0 +1,475 @@
+.dark-mode {
+  background: var(--background-color);
+  //.shadow{
+  //    &.active{
+  //        opacity: 0;
+  //        z-index: 0;
+  //    }
+  //}
+  table.expert-table {
+    tbody {
+      tr {
+        td.description {
+          color: var(--black);
+        }
+        td.other {
+          a {
+            background-color: #26262e;
+            color: var(--black);
+          }
+          .cancel {
+            background-color: #fff1ea;
+            color: #987766;
+          }
+          .trash {
+            background-color: #26262e;
+          }
+        }
+      }
+    }
+  }
+  .sidebar {
+    background-color: var(--white);
+    border-left: 0;
+    .expert-info {
+      .name-email {
+        .name {
+          color: var(--black);
+        }
+
+        .email {
+          color: var(--main-color);
+        }
+      }
+      .switch-theme {
+        .sun {
+          display: block;
+        }
+
+        .moon {
+          display: none;
+        }
+      }
+    }
+    &__menu {
+      ul {
+        li {
+          a {
+            color: var(--black);
+            svg {
+              color: #737284;
+            }
+            &:hover {
+              color: var(--dark-main-color);
+              svg {
+                color: var(--dark-main-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header-expert {
+    .header-expert__top {
+      .logo {
+        .logo_light {
+          display: none;
+        }
+        .logo_dark {
+          display: block;
+        }
+      }
+      .chat-messages-dark {
+        .switch-theme {
+          .sun {
+            display: block;
+          }
+
+          .moon {
+            display: none;
+          }
+        }
+
+        .chat {
+          background-color: #26262e;
+        }
+      }
+    }
+
+    .message-sidebar {
+      .item {
+        background-color: #26262e;
+      }
+    }
+    .chat-sidebar {
+      form {
+        position: relative;
+        width: 100%;
+        input {
+          background-color: var(--background-color);
+          color: var(--black);
+          &::placeholder {
+            color: #737284;
+          }
+        }
+        button {
+          svg {
+            color: #737284;
+          }
+        }
+      }
+      .item {
+        .name-text {
+          .name {
+            color: #fff;
+          }
+        }
+        .date-unread {
+          .unread {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .inner-chat-sidebar {
+      .text {
+        .me {
+          p {
+            background-color: #737284;
+            color: var(--black);
+          }
+          span {
+            color: #737284;
+          }
+        }
+        .other {
+          p {
+            background-color: #26262e;
+            color: var(--black);
+          }
+          span {
+            color: #737284;
+          }
+        }
+      }
+      .bottom {
+        form {
+          svg {
+            color: #737284;
+          }
+        }
+      }
+    }
+  }
+
+  .page-title {
+    border-bottom: 1px solid var(--gray);
+    > p {
+      color: #737284;
+    }
+
+    .sort-search {
+      .search {
+        button {
+          background-color: inherit;
+          svg {
+            color: #737284;
+          }
+        }
+        input {
+          background-color: var(--white);
+          border-color: var(--white);
+          color: var(--text-gray);
+        }
+        input:focus {
+          outline: 0;
+          border: 1px solid var(--main-color);
+        }
+      }
+
+      .sort {
+        select {
+          border: 1px solid var(--gray);
+          background-color: var(--background-color);
+        }
+        select:focus {
+          border: 1px solid var(--main-color);
+        }
+      }
+    }
+  }
+
+  #edit-user-profile {
+    .uk-modal-body {
+      form {
+        .submit {
+          button {
+            background-color: #26262e;
+            &:hover {
+              color: #2b2827;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #process {
+    .process__table {
+      table {
+        thead {
+          th.first-part {
+            background-color: #463942;
+          }
+          th.second-part {
+            background-color: #3c3a48;
+          }
+          th.third-part {
+            background-color: #4e4c48;
+          }
+        }
+        tbody {
+          td.second-part {
+            a {
+              background-color: #26262e;
+            }
+            a.active {
+              background-color: #595572;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .edit-process-modal {
+    .form {
+      form {
+        .form-group {
+          label {
+            color: var(--text-gray);
+          }
+        }
+        .submit {
+          button {
+            background-color: #26262e;
+            &:hover {
+              color: #2b2827;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #apply-status {
+    .university-items {
+      .box {
+        .university-statuses-img {
+          .university-statuses {
+            .status {
+              background-color: #26262e;
+              .icon {
+                svg {
+                  color: var(--text-gray);
+                }
+              }
+
+              .polygon-f .polygon-s {
+                background-color: #26262e;
+              }
+            }
+            .status-cancel {
+              .icon {
+                svg {
+                  color: var(--black);
+                }
+                span {
+                  color: var(--black);
+                }
+              }
+              h3 {
+                color: var(--black);
+              }
+            }
+            .status-done {
+              .icon {
+                svg {
+                  color: var(--black);
+                }
+                span {
+                  color: var(--black);
+                }
+              }
+              h3 {
+                color: var(--black);
+              }
+            }
+          }
+          .university-img {
+            .js-upload {
+              .trash {
+                background-color: #26262e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #select-university {
+    .university__table {
+      table {
+        td.check {
+          .uk-checkbox:checked {
+            background-image: url("@/assets/expert/images/icons/black-check.svg");
+          }
+        }
+      }
+      .table-filter {
+        .clear-submit {
+          .submit {
+            border: 1px solid #26262e;
+            background-color: #26262e;
+          }
+        }
+      }
+    }
+    .university-infos {
+      .box {
+        &__top {
+          .title-major-probability {
+            .title {
+              button {
+                background-color: #26262e;
+              }
+            }
+            .major {
+              input {
+                color: var(--main-color);
+                &::placeholder {
+                  color: var(--text-gray);
+                }
+              }
+            }
+            .probability {
+              > div {
+                a {
+                  &:not(.active):hover {
+                    background-color: #26262e;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &__bottom {
+          .other {
+            .uk-checkbox:checked {
+              background-image: url("@/assets/expert/images/icons/black-check.svg");
+            }
+            div:last-child {
+              input.link {
+                &::placeholder {
+                  color: var(--text-gray);
+                }
+              }
+              .edit {
+                border: 2px solid #26262e;
+                background-color: #26262e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #user-list {
+    .list__items {
+      .box {
+        &__left {
+          .options {
+            a {
+              &:hover {
+                background-color: #26262e;
+              }
+            }
+          }
+        }
+        .watch-more {
+          background-color: #26262e;
+        }
+      }
+    }
+  }
+
+  #consulting {
+    .consulting__infos {
+      .new__session {
+        .uk-switcher {
+          .quick {
+            a {
+              background-color: #26262e;
+            }
+          }
+          .submit {
+            button {
+              background-color: #26262e;
+            }
+          }
+        }
+      }
+      .chart-comments {
+        .chart {
+          ul.uk-subnav {
+            li {
+              &.uk-active {
+                a {
+                  border-color: #26262e !important;
+                  background-color: #26262e !important;
+                }
+              }
+              &:hover {
+                a {
+                  border-color: var(--text-gray);
+                  background-color: var(--text-gray);
+                  color: var(--black);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #write-comment-modal {
+    .uk-modal-body {
+      .text {
+        form {
+          button {
+            background-color: #26262e;
+          }
+        }
+      }
+    }
+  }
+
+  .duty-box-modal {
+    .uk-modal-body {
+      .form {
+        form {
+          .submit {
+            button {
+              background-color: #26262e;
+            }
+          }
+        }
+      }
+    }
+  }
+}

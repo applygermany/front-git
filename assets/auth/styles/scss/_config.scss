@@ -1,0 +1,27 @@
+//@import "./reset";
+@import "./variables";
+@import "./mixin";
+@import "./font";
+
+.uk-container{
+    max-width: 1366px !important;
+}
+
+.loading-button{
+    font-size: 0.9rem;
+    background-color: rgba($thirdColor , 0.6);
+    padding: 1rem;
+    border: 0;
+    width: fit-content;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    @include mobile{
+        padding: 0.75rem;
+        font-size: 0.75rem;
+    }
+    @include tablet{
+        padding: 0.8rem;
+        font-size: 0.75rem;
+    }
+}

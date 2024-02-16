@@ -1,0 +1,81 @@
+.floating-menu{
+    width: 12%;
+    position: fixed;
+    right: 4.5rem;
+    //bottom: 6rem;
+    top: 6rem;
+    z-index: 1;
+    ul{
+        //width: 12%;
+        list-style: none;
+        padding: 0;
+        li{
+            margin-bottom: 1.5rem;
+            position: relative;
+            width: fit-content;
+            a{
+                //-webkit-text-stroke: 0.3px var(--white); /* width and color */
+
+                width: fit-content;
+                color: var(--black);
+                text-decoration: white;
+                font-size: 0.8rem;
+                font-weight: 300;
+                transition: all 0.3s;
+                margin-right: 1rem;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &.active{
+                a{
+                    font-weight: 700;
+                }
+                &::before{
+                    color: var(--main-red-color);
+                    content: "|";
+                    font-size: 1.3rem;
+                    top: -0.2rem;
+                }
+            }
+            &:hover{
+                a{
+                    font-weight: 700;
+                }
+                &::before{
+                    color: var(--main-red-color);
+                    content: "|";
+                    font-size: 1.3rem;
+                    top: -0.2rem;
+                }
+            }
+            &::before{
+                position: absolute;
+                transition: all 0.3s;
+                color: #D9D9D9;
+                font-weight: 700;
+                content: "\2022";
+            }
+        }
+    }
+
+    &.with-panels{
+        li{
+            a{
+                color: var(--white);
+            }
+        }
+    }
+}
+
+@include mobile-device{
+    .floating-menu{
+        display: none;
+    }
+}
+
+@include tablet-device{
+    .floating-menu{
+        display: none;
+    }
+}

@@ -1,0 +1,20 @@
+.js-upload{
+    margin-top: 0;
+    border-radius: 5px;
+    direction: ltr;
+    border-color: var(--gray);
+    .uk-text-middle{
+        color: var(--black);
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    .uk-link{
+        color: var(--main-color);
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .rule{
+        font-size: 0.9rem;
+        color: var(--text-gray);
+    }
+}

@@ -1,0 +1,272 @@
+.uk-width-1-7 {
+  width: calc(100% * 1 / 6.8)
+
+}
+table.text-center {
+
+  thead {
+    tr {
+      th {
+        text-align: center!important;
+      }
+    }
+  }
+}
+table.expert-table {
+  thead {
+    border-bottom: 1px solid var(--gray);
+
+    tr {
+      th {
+        font-size: 0.9rem;
+        text-align: center;
+        color: var(--text-gray);
+      }
+
+      th.align-left {
+        text-align: left;
+      }
+      th.align-right {
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    tr:first-child {
+      td {
+        padding-top: 2rem;
+        text-align: center;
+
+      }
+    }
+
+    tr {
+      border-bottom: 1px solid var(--gray);
+
+      td {
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.8rem;
+      }
+
+      td.align-left,td.align-right {
+        text-align: center;
+      }
+
+      td.date, td.subject, td.counter {
+        color: var(--black);
+      }
+
+      td.type {
+        color: var(--dark-main-color);
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      td.description.yellow {
+        color: var(--dark-main-color);
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      td.name {
+        font-weight: 600;
+        @include fbx-ai-start-jc-start;
+
+        span.user-crown {
+          border-radius: 50%;
+          margin-left: 0.5rem;
+          @include fbx-ai-center-jc-center;
+          padding: 0.5rem;
+          background-color: var(--main-color);
+
+          svg {
+            fill: none;
+            color: var(--white);
+          }
+        }
+
+        .user-name {
+          color: var(--dark-main-color);
+          text-decoration: underline !important;
+        }
+      }
+
+      td.university-name {
+        font-weight: 500;
+        color: var(--dark-main-color);
+      }
+
+      td.description {
+        color: var(--text-gray);
+        text-align: center;
+
+      }
+
+      td.other {
+        font-size: 0.8rem;
+        padding-left: 0;
+
+        a {
+          background-color: var(--inner-background-color);
+          border-radius: 5px;
+          color: var(--black);
+        }
+
+        span.delete {
+          background-color: var(--inner-background-color);
+          border-radius: 5px;
+          color: var(--black);
+        }
+
+        .download {
+          padding: 0.5rem 1.5rem;
+          margin-left: 1rem;
+
+          svg {
+            fill: none;
+            color: var(--black);
+          }
+        }
+
+        .delete {
+          padding: 0.5rem 1.5rem;
+        }
+
+        .cancel {
+          padding: 0.5rem 1.5rem;
+          background-color: #FFF1EA;
+          color: #987766;
+        }
+
+        .trash {
+          padding: 0.5rem;
+
+          svg {
+            fill: none;
+            color: var(--black);
+          }
+        }
+      }
+
+      input.uk-checkbox {
+        border-radius: 3px;
+        border: 1px solid var(--gray);
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+table.latin-table {
+  //text-align: left;
+  direction: ltr;
+
+  thead {
+    th {
+      text-align: left;
+    }
+  }
+
+  tbody {
+    font-family: 'baloo' !important;
+  }
+}
+
+@include mobile-device {
+  table.expert-table {
+    thead {
+      tr {
+        th {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    tbody {
+      tr:first-child {
+        td {
+          padding-top: 1rem;
+        }
+      }
+
+      tr {
+        td {
+          padding-bottom: 1rem;
+          padding-top: 1rem;
+          font-size: 0.75rem;
+        }
+
+        td.name {
+          span.user-crown {
+            width: 0.75rem;
+            height: 0.75rem;
+          }
+        }
+
+        td.other {
+          font-size: 0.75rem;
+
+          .download {
+            padding: 0.25rem 0.75rem;
+            margin-left: 0.5rem;
+
+            svg {
+              width: 0.9rem;
+            }
+          }
+
+          .delete {
+            padding: 0.25rem 0.75rem;
+
+          }
+
+          .cancel {
+            padding: 0.25rem 0.75rem;
+          }
+
+          .trash {
+            padding: 0.25rem;
+
+            svg {
+              width: 0.9rem;
+            }
+          }
+        }
+
+        input.uk-checkbox {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@include tablet-device {
+  table.expert-table {
+    thead {
+      tr {
+        th {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          font-size: 0.8rem;
+        }
+
+        td.other {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

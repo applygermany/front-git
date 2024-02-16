@@ -1,0 +1,73 @@
+// Box Shadow
+@mixin boxshadow($opacity: 0.1, $x: 0px, $y: 0px, $smooth: 15px) {
+    box-shadow: $x $y $smooth rgba(0, 0, 0, $opacity);
+}
+
+// Flex Option
+@mixin flex($direction: row, $content: null, $items: null, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+
+    @if $content {
+        justify-content: $content;
+    }
+
+    @if $items {
+        align-items: $items;
+    }
+}
+
+
+// Left and Right padding of each section 
+@mixin bodyPadding {
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+    @include mobile {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    @include tablet {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    @include largeDevices {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    @include extraLarge {
+        padding-right: 15rem;
+        padding-left: 15rem;
+    }
+}
+
+// Mobile Devices Breakpoint
+@mixin mobile {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+// Extra Large Device Breakpoint
+@mixin extraLarge {
+    @media (min-width : 1400px) {
+        @content;
+    }
+}
+
+// Large Devices
+@mixin largeDevices {
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        @content;
+    }
+}

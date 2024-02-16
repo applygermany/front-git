@@ -1,0 +1,57 @@
+.custom-select {
+    width: 80%;
+    position: relative;
+  }
+  .select-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 5px;
+    color: var(--black);
+    font-size: 0.8rem;
+    padding: 1rem;
+    border: 1px solid var(--gray);
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    width: 85%;
+    border: 1px solid #E4E3E1;
+    border: 1px solid var(--gray);
+    padding-right: 1rem;
+    padding-left: 1rem;
+    position: absolute;
+    background-color: #FFF;
+    background-color: var(--white);
+    margin-top: 0.5rem;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .select-items div {
+    cursor: pointer;
+    color: var(--black);
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray);
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .rotate {
+    transform: rotateZ(180deg);
+  }

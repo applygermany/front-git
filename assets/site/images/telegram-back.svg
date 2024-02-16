@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622" height="368" viewBox="0 0 622 368">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2ca2d9"/>
+      <stop offset="1" stop-color="#3c499b"/>
+    </linearGradient>
+    <filter id="Rectangle_6034" x="0" y="0" width="622" height="368" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feFlood flood-opacity="0.039"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_9951" data-name="Group 9951" transform="translate(-199 -365)">
+    <g transform="matrix(1, 0, 0, 1, 199, 365)" filter="url(#Rectangle_6034)">
+      <rect id="Rectangle_6034-2" data-name="Rectangle 6034" width="478" height="224" rx="6" transform="translate(72 69)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_9925" data-name="Group 9925" transform="translate(61 -60)" opacity="0.08">
+      <g id="Group_9900" data-name="Group 9900">
+        <g id="Ellipse_1602" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9901" data-name="Group 9901" transform="translate(99)">
+        <g id="Ellipse_1602-2" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-2" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9902" data-name="Group 9902" transform="translate(198)">
+        <g id="Ellipse_1602-3" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-3" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9903" data-name="Group 9903" transform="translate(297)">
+        <g id="Ellipse_1602-4" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-4" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9904" data-name="Group 9904" transform="translate(396)">
+        <g id="Ellipse_1602-5" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-5" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9905" data-name="Group 9905" transform="translate(0 44)">
+        <g id="Ellipse_1602-6" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-6" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9906" data-name="Group 9906" transform="translate(99 44)">
+        <g id="Ellipse_1602-7" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-7" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9907" data-name="Group 9907" transform="translate(198 44)">
+        <g id="Ellipse_1602-8" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-8" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9908" data-name="Group 9908" transform="translate(297 44)">
+        <g id="Ellipse_1602-9" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-9" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9909" data-name="Group 9909" transform="translate(396 44)">
+        <g id="Ellipse_1602-10" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-10" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9910" data-name="Group 9910" transform="translate(0 88)">
+        <g id="Ellipse_1602-11" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-11" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9911" data-name="Group 9911" transform="translate(99 88)">
+        <g id="Ellipse_1602-12" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-12" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9912" data-name="Group 9912" transform="translate(198 88)">
+        <g id="Ellipse_1602-13" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-13" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9913" data-name="Group 9913" transform="translate(297 88)">
+        <g id="Ellipse_1602-14" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-14" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9914" data-name="Group 9914" transform="translate(396 88)">
+        <g id="Ellipse_1602-15" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-15" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9915" data-name="Group 9915" transform="translate(0 132)">
+        <g id="Ellipse_1602-16" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-16" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9916" data-name="Group 9916" transform="translate(99 132)">
+        <g id="Ellipse_1602-17" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-17" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9917" data-name="Group 9917" transform="translate(198 132)">
+        <g id="Ellipse_1602-18" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-18" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9918" data-name="Group 9918" transform="translate(297 132)">
+        <g id="Ellipse_1602-19" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-19" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9919" data-name="Group 9919" transform="translate(396 132)">
+        <g id="Ellipse_1602-20" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-20" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9920" data-name="Group 9920" transform="translate(0 176)">
+        <g id="Ellipse_1602-21" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-21" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9921" data-name="Group 9921" transform="translate(99 176)">
+        <g id="Ellipse_1602-22" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-22" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9922" data-name="Group 9922" transform="translate(198 176)">
+        <g id="Ellipse_1602-23" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-23" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9923" data-name="Group 9923" transform="translate(297 176)">
+        <g id="Ellipse_1602-24" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-24" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_9924" data-name="Group 9924" transform="translate(396 176)">
+        <g id="Ellipse_1602-25" data-name="Ellipse 1602" transform="translate(222 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+        <g id="Ellipse_1603-25" data-name="Ellipse 1603" transform="translate(256 506)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="12" cy="12" r="12" stroke="none"/>
+          <circle cx="12" cy="12" r="11.5" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

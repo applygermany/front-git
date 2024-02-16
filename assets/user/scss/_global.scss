@@ -1,0 +1,180 @@
+:root {
+    --background-color: #F5F5F5;
+    --inner-background-color : #F1F0F0;
+    --white: #FFF;
+    --black: #2B2827;
+    --dark: #000;
+    --gray: #E4E3E1;
+    --text-gray : #A5A29B;
+    --red: #CC2A2A;
+    --blue: #6EA1E6;
+    --main-color: #E2AD42;
+    --light-main-color : #FFE163;
+    --dark-main-color: #C5973A;
+    --global-padding-x: 1.5%;
+}
+
+.dark-mode{
+    --background-color: #11121B!important;
+    --inner-background-color : #181922!important;
+    --white: #181922!important;
+    --black: #DBDAE1!important;
+    --gray: rgba(115 , 114 , 132 , 0.3)!important;
+    --text-gray : #737284!important;
+    --red: #CC2A2A!important;
+    --blue: #6EA1E6!important;
+    --main-color: #FFE163!important;
+    //--light-main-color : #E2AD42!important;
+    --dark-main-color: #FFE163!important;
+}
+
+.global-container {
+    padding: 0 var(--global-padding-x);
+    max-width: 1366px;
+    margin: 0 auto;
+
+    @include mobile-device {
+        padding: 0 4%;
+    }
+}
+
+.latin-font{
+    font-family: 'baloo' !important;
+}
+
+.w-100{
+    width: 100% !important;
+}
+.w-80{
+    width: 80% !important;
+}
+.w-75{
+    width: 75% !important;
+}
+.w-70{
+    width: 70% !important;
+}
+.w-65{
+    width: 65% !important;
+}
+.w-55{
+    width: 55% !important;
+}
+.w-50{
+    width: 48% !important;
+}
+.w-45{
+    width: 45% !important;
+}
+.w-40{
+    width: 40% !important;
+}
+.w-35{
+    width: 35% !important;
+}
+.w-30{
+    width: 30% !important;
+}
+.w-25{
+    width: 25% !important;
+}
+.w-22{
+    width: 22% !important;
+}
+.w-20{
+    width: 20% !important;
+}
+.w-18{
+    width: 18% !important;
+}
+.w-15{
+    width: 15% !important;
+}
+.w-10{
+    width: 10% !important;
+}
+
+.main{
+    position: relative;
+
+    .wrapper{
+        background-color: var(--background-color);
+
+        width: calc(85% - 5rem);
+        margin-right: 15%;
+        padding: 2.5rem;
+        transition: all 0.5s;
+        margin-top: 3.5rem;
+        height: calc(100vh - 8.5rem);
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: var(--main-color);;
+            border-radius: 15px;
+        }
+    }
+    .wrapper.collapse{
+        width: calc(94% - 5rem);
+        margin-right: 6%;
+    }
+
+    @include mobile-device{
+        .wrapper{
+            width: calc(100% - 3rem);
+            height: calc(100vh - 6.5rem);
+            margin-right: 0;
+            padding: 1.5rem;
+        }
+        .wrapper.collapse{
+            width: calc(100% - 3rem);
+            margin-right: 0;
+        }
+    }
+
+    @include tablet-device{
+        .wrapper{
+            width: calc(100% - 3rem);
+            height: calc(100vh - 6.5rem);
+            margin-right: 0;
+            padding: 1.5rem;
+        }
+        .wrapper.collapse{
+            width: calc(100% - 3rem);
+            margin-right: 0;
+        }
+    }
+}
+.shadow{
+    opacity: 0;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s;
+    //z-index: 0;
+
+    &.active{
+        height: 100vh;
+        opacity: 0.4;
+        z-index: 99;
+    }
+}
+.loading-button{
+    font-size: 0.9rem;
+    background-color: var(--inner-background-color);
+    padding: 1rem;
+    border: 0;
+    width: fit-content;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+}

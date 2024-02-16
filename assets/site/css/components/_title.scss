@@ -1,0 +1,144 @@
+.landing-title{
+    @include fbx-column-ai-center-jc-center;
+    margin-bottom: 3rem;
+    margin-top: 2em;
+    h1{
+        font-size: 1.8rem;
+        color: var(--black);
+        font-weight: 700;
+    }
+    p{
+        margin-top: 2rem;
+        color: var(--black);
+        font-weight: 300;
+        font-size: 0.9rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+    form{
+        margin-top: 2rem;
+        width: 40%;
+        position: relative;
+        button{
+            position: absolute;
+            background-color: inherit;
+            border: 0;
+            top: 25%;
+            right: 2%;
+            transition: all 0.3s;
+            svg{
+                transition: all 0.3s;
+                width: 1.25rem;
+                fill: none;
+                color: #A5A29B;
+            }
+        }
+        span{
+            opacity: 0;
+            position: absolute;
+            background-color: inherit;
+            border: 0;
+            top: 25%;
+            right: 2%;
+            color: #A5A29B;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+        input{
+            font-size: 0.8rem;
+            border-radius: 5px;
+            background-color: rgba(#E4E3E1 , 0.75);
+            border: 1px solid rgba(#E4E3E1 , 0.75);
+            padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+            width: 100%;
+            transition: border 0.3s;
+            &:hover{
+                &::placeholder{
+                    color: var(--black);
+                }
+            }
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration{
+                -webkit-appearance:none;
+            }
+        }
+        input:focus{
+            outline: 0;
+        }
+        input:not(:placeholder-shown){
+            padding-right: 4rem;
+            + span{
+                opacity: 1;
+                + button{
+                    right: inherit;
+                    left: 2%;
+                    svg{
+                        color: var(--main-color);
+                    }
+                }
+            }
+        }
+        input::placeholder{
+            font-size: 0.8rem;
+            color: #A5A29B;
+            transition: all 0.3s;
+        }
+    }
+}
+#landing3{
+    .landing-title{
+        p{
+            width: 60%;
+            a{
+                color: var(--dark-main-color);
+            }
+        }
+    }
+}
+
+@include mobile-device{
+    .landing-title{
+        margin-bottom: 2rem;
+        h1{
+            font-size: 1.3rem;
+        }
+        p{
+            margin-top: 1rem;
+            font-size: 0.75rem;
+        }
+
+        form{
+            width: 100%;
+            input{
+                font-size: 0.75rem;
+            }
+            input::placeholder{
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    #landing3{
+        .landing-title{
+            p{
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+@include tablet-device{
+    .landing-title{
+        margin-bottom: 2rem;
+        h1{
+            font-size: 1.3rem;
+        }
+        p{
+            margin-top: 1rem;
+            font-size: 0.75rem;
+        }
+    }
+}

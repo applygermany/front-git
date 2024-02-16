@@ -1,0 +1,341 @@
+.error {
+  font-size: 14px;
+  padding-top: 5px;
+  font-weight: 600;
+}
+:focus-visible {
+  outline: none;
+}
+input:focus {
+  border: 1px var(--main-color) solid;
+}
+.auth {
+  @include flex(row, space-between, null);
+  padding-right: 12rem!important;
+  padding-left: 12rem!important;
+
+  .background {
+    margin-top: -6rem;
+    width: 52%;
+  }
+
+  .form {
+    width: 38%;
+    margin-top: 2rem;
+
+    form {
+      width: 100%;
+
+      .form-group {
+        @include flex(column);
+        width: 100%;
+        margin-bottom: 1.5rem;
+        position: relative;
+
+        input {
+          width: 80%;
+          border: 1px solid rgba(black, 0.1);
+          padding: 1rem;
+          border-radius: 5px;
+          font-size: 0.9rem;
+          -ms-box-sizing: content-box;
+          -moz-box-sizing: content-box;
+          -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+          transition: 0.3s ease-in-out all;
+        }
+
+        input::placeholder {
+          font-size: 0.8rem;
+          font-weight: 300;
+          color: $secondColor;
+          transition: 0.2s ease-in;
+        }
+
+        input:focus,
+        select:focus {
+          // border: 0;
+
+            outline: 1px solid $mainColor!important;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 30px white inset !important;
+        }
+
+        .floating {
+          top: 1rem;
+          right: 5%;
+          position: absolute;
+          pointer-events: none;
+          transition: 0.2s ease all;
+          background-color: white;
+          color: $secondColor;
+          font-size: 0.8rem;
+          font-weight: 300;
+        }
+        .error {
+          font-size: 0.8rem;
+          margin-top: 0.5rem;
+          color: red;
+        }
+        input:focus ~ label,
+        input:not(:placeholder-shown) ~ label {
+          top: -12%;
+          padding: 0 0.5rem;
+        }
+      }
+
+      .forget-password {
+        margin-bottom: 2.5rem;
+        a {
+          color: $darkMainColor;
+          text-decoration: none;
+          border-bottom: 1px solid $mainColor;
+          font-size: 0.9rem;
+        }
+      }
+
+      .code {
+        @include flex(row, space-between, center);
+        direction: ltr;
+        input {
+          background-color: white;
+          border-radius: 5px;
+          width: 18%;
+          height: 4rem;
+          padding: 0;
+          text-align: center;
+          font-weight: 500;
+          border: 1px solid rgba(black, 0.1);
+        }
+        input[type="number"] {
+          -webkit-appearance: none;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+      }
+      .error-code {
+        font-size: 0.9rem;
+        color: red;
+        margin-bottom: 1rem;
+      }
+      .counter-wrong-number {
+        @include flex(row, space-between, center);
+        margin-bottom: 2rem;
+        p {
+          font-size: 0.9rem;
+          color: rgba($color: black, $alpha: 0.8);
+          a {
+            text-decoration: none;
+            color: $darkMainColor;
+            border-bottom: 1px solid $darkMainColor;
+          }
+        }
+        .counter {
+          span {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .submit {
+        button {
+          font-size: 0.9rem;
+          background-color: $thirdColor;
+          padding: 1rem;
+          border: 0;
+          border-radius: 5px;
+          width: 75%;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+
+        button:hover {
+          background-color: $mainColor;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    padding-right: 1rem!important;
+    padding-left: 1rem!important;
+    .background {
+      display: none;
+    }
+    .form {
+      margin-top: 1.5rem;
+      width: 100%;
+      form {
+        .form-group {
+          input,
+          .custom-select {
+            width: calc(100% - 1.5rem);
+            font-size: 0.75rem;
+          }
+
+          input::placeholder {
+            font-size: 0.75rem;
+          }
+          .error {
+            font-size: 0.75rem;
+          }
+          .floating {
+            font-size: 0.75rem;
+          }
+        }
+        .forget-password {
+          margin-bottom: 2rem;
+          a {
+            font-size: 0.75rem;
+          }
+        }
+
+        .code {
+          input {
+            width: 10%;
+            height: 2rem;
+          }
+        }
+
+        .counter-wrong-number {
+          margin-bottom: 1.5rem;
+          p {
+            font-size: 0.75rem;
+          }
+          .counter {
+            span {
+              font-size: 0.75rem;
+            }
+          }
+        }
+        .error-code {
+          font-size: 0.75rem;
+        }
+        .submit {
+          button {
+            font-size: 0.75rem;
+            padding: 0.75rem;
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+    .background {
+      margin-top: -3rem;
+    }
+
+    .form {
+      form {
+        .form-group {
+          input,
+          .custom-select {
+            width: 80%;
+            padding: 0.75rem;
+            font-size: 0.8rem;
+          }
+          .error {
+            font-size: 0.75rem;
+          }
+        }
+        .forget-password {
+          margin-bottom: 2rem;
+          a {
+            font-size: 0.8rem;
+          }
+        }
+
+        .code {
+          input {
+            width: 10%;
+            height: 2rem;
+          }
+        }
+
+        .counter-wrong-number {
+          margin-bottom: 1.5rem;
+          p {
+            font-size: 0.8rem;
+          }
+          .counter {
+            span {
+              font-size: 0.8rem;
+            }
+          }
+        }
+        .error-code {
+          font-size: 0.75rem;
+        }
+        .submit {
+          button {
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+
+  @include largeDevices {
+    padding-right: 6rem;
+    padding-left: 6rem;
+
+    .form {
+      form {
+        .submit {
+          button {
+            font-size: 0.75rem;
+            padding: 0.75rem;
+            width: 65%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.register-2,
+.reset-password-2 {
+  .form {
+    form {
+      .submit {
+        @include flex(row, flex-end, center);
+      }
+    }
+  }
+
+  @include mobile {
+    .form {
+      form {
+        .submit {
+          @include flex(row, center, center);
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    .form {
+      width: 48%;
+    }
+  }
+
+  @include largeDevices {
+    .form {
+      width: 48%;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.custom-select{
+    position: relative;
+    select{
+        border-radius: 5px;
+        color: var(--black);
+        font-size: 0.8rem;
+        padding: 0.75rem;
+        border: 1px solid var(--gray);
+        cursor: pointer;
+        user-select: none;
+        width: 100%;
+        background-color: var(--white);
+        &:focus{
+            outline: 0;
+        }
+    }
+}
+.select-selected {
+    border-radius: 5px;
+    color: var(--black);
+    font-size: 0.8rem;
+    padding: 0.75rem;
+    border: 1px solid var(--gray);
+    cursor: pointer;
+    user-select: none;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    border-style: solid;
+    border-width: 0.1em 0.1em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    left: 1rem;
+    position: absolute;
+    vertical-align: top;
+    width: 0.45em;
+    top: 1rem;
+    transform: rotate(135deg);
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    top: 1.25rem;
+    transform: rotate(-45deg);
+}
+
+/*style items (options):*/
+.select-items {
+    border: 1px solid var(--gray);
+    padding-right: 1rem;
+    padding-left: 1rem;
+    position: absolute;
+    background-color: var(--white);
+    margin-top: 0.5rem;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 5px;
+}
+.select-items div{
+    cursor: pointer;
+    color : var(--black);
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray);
+    &:last-child{
+        border-bottom: 0;
+    }
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+//.select-items div:hover, .same-as-selected {
+//    background-color: rgba(0, 0, 0, 0.1);
+//}
+
+@include mobile-device{
+    .custom-select{
+        select{
+            font-size: 0.75rem;
+            padding: 0.5rem;
+        }
+    }
+}

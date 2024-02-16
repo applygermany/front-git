@@ -1,0 +1,55 @@
+@import "modules";
+
+html {
+    font-size: 16px;
+    background: linear-gradient(180deg, #F2F1EF 0%, #F6F6F5 100%);
+    transition: all 0.3s;
+    background: var(--background-color) !important;
+    body {
+        margin: 0;
+    }
+
+    @include tablet-device {
+        overflow-x: hidden !important;
+    }
+}
+//.dark-mode #dashboard,.dark-mode .wrapper {
+//    background-color: var(--inner-background-color);
+//}
+//
+//#dashboard,.wrapper {
+//    background-color: var(--inner-background-color);
+//}
+.my-tooltip {
+    position: relative;
+    display: inline-block;
+    transition: all ease-in 150ms;
+
+}
+
+.my-tooltip .my-tooltiptext {
+    //visibility: hidden;
+    opacity: 0;
+    transition: all ease-in 150ms;
+    width: 60px;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 0;
+
+    /* Position the tooltip */
+    font-size: 12px;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -30px;
+}
+
+.my-tooltip:hover .my-tooltiptext {
+    transition: all ease-in 150ms;
+
+    //visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,104 @@
+//Morabba Font Family
+@font-face {
+    font-family: 'morabbavf';
+    src: url('@/static/site/assets/fonts/MorabbaVF.woff') format('woff-variations'),
+        /* will be the standard and works in Safari now */
+    url('@/static/site/assets/fonts/MorabbaVF.woff') format('woff');
+    /* for the other supporting browsers */
+    font-weight: 100 900;
+    font-display: fallback;
+}
+
+// Iransans Font family
+@font-face {
+    font-family: 'iransansxv';
+    src: url('@/static/site/assets/fonts/IRANSansXV.woff') format('woff-variations'),
+    /* will be the standard and works in Safari now */
+    url('@/static/site/assets/fonts/IRANSansXV.woff') format('woff');
+    /* for the other supporting browsers */
+    font-weight: 100 900;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: iransansx;
+    src: url('@/static/site/assets/fonts/IRANSansX-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: iransansx;
+    src: url('@/static/site/assets/fonts/IRANSansX-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+// Baloo Font Family
+@font-face {
+    font-family: baloo;
+    font-style: normal;
+    font-weight: bold;
+    src : url('@/static/site/assets/fonts/Baloo2-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: baloo;
+    font-style: normal;
+    font-weight: normal;
+    src : url('@/static/site/assets/fonts/Baloo2-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: baloo;
+    font-style: normal;
+    font-weight: 500;
+    src : url('@/static/site/assets/fonts/Baloo2-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: baloo;
+    font-style: normal;
+    font-weight: 750;
+    src : url('@/static/site/assets/fonts/Baloo2-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: baloo;
+    font-style: normal;
+    font-weight: 800;
+    src : url('@/static/site/assets/fonts/Baloo2-ExtraBold.ttf') format('truetype');
+}
+
+body {
+    font-family: iransansx !important;
+    -moz-font-feature-settings: "ss02";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+}
+h1, h2, h3, h4, h5, h6,input, textarea , button , select {
+    font-family: iransansx !important;
+    -moz-font-feature-settings: "ss02";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+}
+h1 {
+	font-weight: bold;
+}
+@supports (font-variation-settings: normal) {
+    body {
+     font-family: 'iransansxv' !important;
+     -moz-font-feature-settings: "ss02";
+     -webkit-font-feature-settings: "ss02";
+     font-feature-settings: "ss02";
+    }
+    h1, h2, h3, h4, h5, h6,input, textarea {
+        font-family: 'iransansxv' !important;
+        -moz-font-feature-settings: "ss02";
+        -webkit-font-feature-settings: "ss02";
+        font-feature-settings: "ss02";
+    }
+
+    .title-font{
+        font-family: 'morabbavf' !important;
+        -moz-font-feature-settings: "ss02";
+        -webkit-font-feature-settings: "ss02";
+        font-feature-settings: "ss02";
+    }
+}

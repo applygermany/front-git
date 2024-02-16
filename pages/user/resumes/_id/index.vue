@@ -1,0 +1,192 @@
+<template>
+  <div>
+    <section
+      class="wrapper"
+      id="submit-resume"
+      :class="[vuexUserMenuState ? 'collapse' : '']"
+    >
+      <TitlePrice />
+
+      <First />
+
+      <Second />
+
+      <Third />
+
+      <Fourth />
+
+       <Fifth />
+
+      <SixthSeventh />
+
+      <Eighth />
+
+     <NinthTenthEleventh />
+
+      <Final/>
+    </section>
+  </div>
+</template>
+
+<script>
+import TitlePrice from "@/components/user/resumes/preview/_titlePrice.vue";
+import First from "@/components/user/resumes/preview/_first.vue";
+import Second from "@/components/user/resumes/preview/_second.vue";
+import Third from "@/components/user/resumes/preview/_third.vue";
+import Fourth from "@/components/user/resumes/preview/_fourth.vue";
+import Fifth from "@/components/user/resumes/preview/_fifth.vue";
+import SixthSeventh from "@/components/user/resumes/preview/_sixthSeventh.vue";
+import Eighth from "@/components/user/resumes/preview/_eighth.vue";
+import NinthTenthEleventh from "@/components/user/resumes/preview/_ninthTenthEleventh.vue";
+import Final from "@/components/user/resumes/preview/_final.vue";
+
+export default {
+  layout: "userLayout",
+  components: {
+    TitlePrice,
+    First,
+    Second,
+    Third,
+    Fourth,
+    Fifth,
+    SixthSeventh,
+    Eighth,
+    NinthTenthEleventh,
+    Final,
+  },
+  async asyncData({ $auth, store, redirect }) {
+    if (!$auth.loggedIn) redirect("/auth/signin");
+    else {
+      if ($auth.user.level !== 1) {
+        $auth.logout();
+        redirect("/auth/signin");
+      }
+    }
+  },
+  computed: {
+    vuexUserMenuState() {
+       return this.$store.getters['user/vuexUserMenuState']
+    },
+  },
+  head() {
+    return {
+      title: "رزومه",
+    };
+  },
+};
+</script>
+
+<style lang="scss">
+@import "~/assets/user/scss/_mixins.scss";
+
+.resume-box {
+  padding: 1.5rem;
+  @include boxshadow();
+  border-radius: 8px;
+  background-color: var(--white);
+  margin-bottom: 2rem;
+  h3 {
+    color: var(--black);
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+  hr {
+    width: 15%;
+    border-color: var(--gray);
+    margin-bottom: 2.5rem;
+  }
+}
+
+form {
+  .row {
+    .form-group {
+      position: relative;
+      input,
+      textarea {
+        font-size: 0.8rem;
+        border: 1px solid var(--gray);
+        border-radius: 5px;
+        width: calc(99.8% - 1.5rem);
+        padding: 0.75rem;
+        color: var(--black);
+        background-color: var(--white);
+        transition: all 0.3s;
+        &.error {
+          border: 1px solid red;
+          &:focus {
+            outline: 0;
+            border-color: red;
+          }
+        }
+        &::placeholder {
+          font-family: iransansx;
+          font-size: 0.8rem;
+          color: var(--main-color);
+          direction: rtl;
+          text-align: right;
+          font-weight: 300;
+          transition: 0.2s ease-in;
+        }
+        &:focus {
+          outline: 0;
+          border-color: var(--main-color);
+        }
+      }
+      input:focus,
+      select:focus {
+        outline-color: var(--main-color);
+      }
+
+      .floating {
+        top: 0.75rem;
+        right: 0.75rem;
+        position: absolute;
+        pointer-events: none;
+        transition: 0.2s ease all;
+        background-color: var(--white);
+        color: var(--text-gray);
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+      span.error {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        color: red;
+      }
+      input:focus ~ label,
+      input:not(:placeholder-shown) ~ label {
+        top: -21%;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
+
+@include mobile-device {
+  .resume-box {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    h3 {
+      font-size: 0.8rem;
+    }
+    hr {
+      width: 40%;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@include tablet-device {
+  .resume-box {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    h3 {
+      font-size: 0.8rem;
+    }
+    hr {
+      width: 40%;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+</style>
