@@ -1,7 +1,6 @@
 <template>
     <div class="list__items">
         <Box :key="index" :user="user" v-for="(user, index) in users"/>
-
         <client-only>
             <infinite-loading
                     @infinite="infiniteHandler"

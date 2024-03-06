@@ -44,6 +44,7 @@ export default {
     store.commit("expert/SET_User", data.user);
     store.commit("expert/SET_UserId", params.id);
     store.commit("expert/SET_importantFilesThatNotExist", data.importantFilesThatNotExist);
+    store.commit("expert/SET_tokenDownloadAll", data.tokenDownloadAll);
   },
   computed: {
     vuexUserMenuState() {

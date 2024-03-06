@@ -26,7 +26,7 @@
           </div>
           <div class="left">
             <!--                        <a target="_blank" :href="'https://api.applygermany.net/contracts/'+level"-->
-            <a target="_blank" :href="'https://api.applygermany.net/contract/' + $auth.user.id"
+            <a @click="startShowingFile($auth.user.id,)"
             ><img
                 alt=""
                 src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNzUgMTQuNzVWMTYuMjVDNC43NSAxNy45MDY5IDYuMDkzMTUgMTkuMjUgNy43NSAxOS4yNUgxNi4yNUMxNy45MDY5IDE5LjI1IDE5LjI1IDE3LjkwNjkgMTkuMjUgMTYuMjVWMTQuNzUiIHN0cm9rZT0iIzE0MTQxNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTIgMTQuMjVMMTIgNC43NSIgc3Ryb2tlPSIjMTQxNDE0IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik04Ljc1IDEwLjc1TDEyIDE0LjI1TDE1LjI1IDEwLjc1IiBzdHJva2U9IiMxNDE0MTQiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg=="
@@ -141,6 +141,14 @@ export default {
     };
   },
   methods: {
+      startShowingFile(userId){
+          this.$axios.post('v1/user/generateHashCode',{userId:userId}).then((res)=>{
+              let url='https://api.applygermany.net/contractUser/'+userId+'/'+res.data;
+              window.open(url, '_blank');
+          }).catch((err)=>{
+              console.log(err,'error is here')
+          })
+      },
     closeModal() {
       setTimeout(() => {
         this.fileName = null;

@@ -45,7 +45,7 @@
                   <span class="toman" v-if="transaction.currency_sym === 'ir'">IR</span>
               </td>
               <td class="date">
-                <a class="payment" :href="'https://api.applygermany.net/invoice/' + transaction.id" target="_blank">دانلود</a>
+                <a class="payment" @click="startShowingFile(transaction.id)">دانلود</a>
               </td>
             </tr>
           </tbody>
@@ -62,7 +62,18 @@ export default {
       return this.$store.getters["user/transactions"];
     },
   },
+
   methods:{
+      startShowingFile(transactionId){
+          this.$axios.post('v1/user/generateHashCode',{transaction_id:this.transactions.id}).then((res)=>{
+              console.log(res,'res is here');
+              let url='https://api.applygermany.net/invoice/'+transactionId+'/'+res.data;
+               window.open(url, '_blank');
+          // :href="'https://api.applygermany.net/invoice/' + transaction.id"
+          }).catch((err)=>{
+              console.log(err,'error is here')
+          })
+      },
     payment(hash){
       this.$router.push(`/payment/${hash}`);
     }

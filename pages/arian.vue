@@ -20,7 +20,7 @@ export default {
   },
   methods:{
     testAxioses(){
-     this.$axios.post('v1/expert/getAllUser', {take: 10}).then((res)=>{
+     this.$axios.get('v1/user/uploads').then((res)=>{
        console.log(res,'res is here guys')
      }).catch((err)=>{
        console.log(err,'error is here guys')

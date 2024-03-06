@@ -66,7 +66,7 @@
                 فرمایید .
               </p>
               <p v-if="motivation.status === 5">
-                انگیزه نامه آماده است ! می توانیـد آن را از لینک روبرو دانلـود
+                رزومه آماده است ! می توانیـد آن را از لینک روبرو دانلـود
                 کنید .
               </p>
               <p v-if="motivation.status === 3">
@@ -75,7 +75,7 @@
               </p>
             </div>
             <a
-              :href="motivation.main_file"
+              @click="downloadFile(motivation.id,motivation.main_file)"
               class="download"
               style="margin-top: 30px"
               v-if="
@@ -212,6 +212,28 @@ export default {
     },
   },
   methods: {
+    async downloadFile(id,fileName) {
+          try {
+              const parts = fileName.split('/');
+              let lastPartOfId = parts[parts.length - 1];
+              const response = await this.$axios.get('v1/user/getWriterFile/'+id+'/'+lastPartOfId+'/resume', {
+                  responseType: 'blob'
+              });
+              const url = window.URL.createObjectURL(new Blob([response.data]));
+              const link = document.createElement('a');
+              link.href = url;
+              link.setAttribute('download',lastPartOfId);
+              document.body.appendChild(link);
+              link.click();
+              window.URL.revokeObjectURL(url);
+          } catch (error) {
+              console.error('Error downloading file:', error);
+              this.$toasted.info('مشکلی رخ داده است، لینک دانلود وجود ندارد و یا اتصال اینترنت شما قطع است !', {
+                  position: "bottom-left",
+                  duration: 5000,
+              });
+          }
+      },
     showEditRequestModal(id) {
       this.$store.dispatch("setEditRequestId", id);
     },

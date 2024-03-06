@@ -516,7 +516,7 @@ export default {
 
     },
     async created() {
-
+        window.location.replace("https://applygermany.net");
         const {data} = await this.$axios.post(`v1/webinar`, {'id': this.$route.params.slug});
         if (data.status === 1) {
             this.webinar = data.webinar;

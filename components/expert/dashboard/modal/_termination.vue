@@ -72,6 +72,7 @@ export default {
                         position: "bottom-left",
                         duration: 5000,
                     });
+                    window.location.reload();
                 }else{
                     this.$toasted.error(res.data.msg, {
                         position: "bottom-left",

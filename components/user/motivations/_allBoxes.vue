@@ -72,9 +72,7 @@
                 درخواست کارشناس را در کادر زیر پاسخ دهید
               </p>
             </div>
-            <a
-                    target="_blank"
-              :href="motivation.main_file"
+            <a @click="downloadFile(motivation.id,motivation.main_file)"
               class="download"
               v-if="
                 motivation.main_file !== null && motivation.main_file !== '' && motivation.status === 5
@@ -214,6 +212,28 @@ export default {
     },
   },
   methods: {
+    async downloadFile(id,fileName) {
+          try {
+              const parts = fileName.split('/');
+              let lastPartOfId = parts[parts.length - 1];
+              const response = await this.$axios.get('v1/user/getWriterFile/'+id+'/'+lastPartOfId+'/motivation', {
+                  responseType: 'blob'
+              });
+              const url = window.URL.createObjectURL(new Blob([response.data]));
+              const link = document.createElement('a');
+              link.href = url;
+              link.setAttribute('download',lastPartOfId);
+              document.body.appendChild(link);
+              link.click();
+              window.URL.revokeObjectURL(url);
+          } catch (error) {
+              console.error('Error downloading file:', error);
+              this.$toasted.info('مشکلی رخ داده است، لینک دانلود وجود ندارد و یا اتصال اینترنت شما قطع است !', {
+                  position: "bottom-left",
+                  duration: 5000,
+              });
+          }
+      },
     showEditRequestModal(id) {
       this.$store.dispatch("setEditRequestId", id);
     },

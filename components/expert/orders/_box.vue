@@ -130,11 +130,11 @@
                         <ListItemResume/>
                         <span>اطلاعات</span>
                     </nuxt-link>
-                    <a target="_blank" v-if="user.type==='motivation'" :href="user.motivation.file">
+                    <a v-if="user.type==='motivation'" @click="downloadFile(user.motivation.file)">
                         <Download/>
                         <span>دانلود</span>
                     </a>
-                    <a target="_blank" v-if="user.type==='resume'" :href="user.resume.file">
+                    <a v-if="user.type==='resume'" @click="downloadFile(user.resume.file)">
                         <Download/>
                         <span>دانلود</span>
                     </a>
@@ -346,7 +346,32 @@ export default {
         },
     },
     methods: {
+        async downloadFile(id) {
+            try {
+                const parts = id.split('/');
+                let lastPartOfId = parts[parts.length - 1];
+                const response = await this.$axios.get('v1/expert/getWriterFile/'+lastPartOfId, {
+                    responseType: 'blob' // Specify the response type as blob to handle binary data
+                });
+                // Create a blob URL for the downloaded file
+                const url = window.URL.createObjectURL(new Blob([response.data]));
+                // Create a link element and click on it to trigger the file download
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download',lastPartOfId); // Specify the filename
+                document.body.appendChild(link);
+                link.click();
 
+                // Clean up
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                console.error('Error downloading file:', error);
+                this.$toasted.info('مشکلی رخ داده است، لینک دانلود وجود ندارد و یا اتصال اینترنت شما قطع است !', {
+                    position: "bottom-left",
+                    duration: 5000,
+                });
+            }
+        },
         closeModal(childValue) {
             this.userSelected = childValue;
         },

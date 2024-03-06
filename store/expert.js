@@ -25,6 +25,7 @@ export const state = () => ({
     userId: null,
     dataId: null,
     importantFilesThatNotExist: null,
+    tokenDownloadAll: null,
     type: null,
 
     // ! uploads
@@ -135,6 +136,9 @@ export const getters = {
     },
     importantFilesThatNotExist(state) {
         return state.importantFilesThatNotExist;
+    },
+    tokenDownloadAll(state) {
+        return state.tokenDownloadAll;
     },
     dataId(state) {
         return state.dataId;
@@ -326,6 +330,10 @@ export const mutations = {
 
     SET_importantFilesThatNotExist(state, payload) {
         state.importantFilesThatNotExist = payload;
+    },
+
+    SET_tokenDownloadAll(state, payload) {
+        state.tokenDownloadAll = payload;
     },
 
     // ! uploads
@@ -560,6 +568,7 @@ export const actions = {
         commit("SET_User", data.user);
         commit("SET_UserId", payload);
         commit("SET_importantFilesThatNotExist", data.importantFilesThatNotExist);
+        commit("SET_tokenDownloadAll", data.tokenDownloadAll);
     },
 
     // ! Universities

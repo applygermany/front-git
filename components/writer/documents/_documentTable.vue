@@ -3,11 +3,11 @@
     <div class="">
       <table v-if="uploads && uploads.length > 0" class="uk-table expert-table">
         <thead>
-        <tr>
+         <tr>
           <th>تاریخ</th>
           <th>لیست مدارک</th>
           <th>توضیحات</th>
-        </tr>
+         </tr>
         </thead>
         <tbody>
         <tr :key="index" v-for="(upload, index) in uploads" v-if="upload.type !== 7">
@@ -50,7 +50,7 @@
             {{ upload.text }}
           </td>
           <td class="other uk-text-nowrap align-left">
-            <a :href="upload.url" class="download" target="_blank">
+            <a @click="doTheAxios('madarek',upload.id)" class="download" target="_blank">
               <svg
                   class="uk-svg"
                   fill="none"
@@ -165,6 +165,47 @@ export default {
       return this.$store.getters["writer/userId"];
     },
   },
+    methods:{
+        doTheAxios(type,id){
+            this.$axios.get(`v1/writer/getFileNameAndFormat/${type}/${id}`).then((res)=>{
+                if(res.data.status==1){
+                    this.fileName=res.data.fileName;
+                    this.downloadFile(type,id);
+                }else{
+                    this.$toasted.info(res.data.msg, {
+                        position: "bottom-left",
+                        duration: 5000,
+                    });
+                }
+            }).catch((err)=>{
+                this.$toasted.error('مشکلی رخ داده است ، از اتصال اینترنت خود مطمئن شوید', {
+                    position: "bottom-left",
+                    duration: 5000,
+                });
+                console.log(err,'error is here')
+            })
+        },
+        async downloadFile(type,id) {
+            try {
+                const response = await this.$axios.get('v1/writer/getDownloadByFormat/'+type+'/'+id, {
+                    responseType: 'blob' // Specify the response type as blob to handle binary data
+                });
+                // Create a blob URL for the downloaded file
+                const url = window.URL.createObjectURL(new Blob([response.data]));
+                // Create a link element and click on it to trigger the file download
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', this.fileName); // Specify the filename
+                document.body.appendChild(link);
+                link.click();
+
+                // Clean up
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                console.error('Error downloading file:', error);
+            }
+        },
+    }
 };
 </script>
 

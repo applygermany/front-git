@@ -53,7 +53,7 @@
 <!--       <span uk-icon="ban"></span>-->
         رد شده
       </a>
-      <a :href="upload.url" target="_blank" class="it_is_accepted">
+      <a @click="doTheAxios('madarek',upload.id)" class="it_is_accepted">
        <span uk-icon="download" class="download-icon"></span>
       </a>
 
@@ -88,8 +88,46 @@
 <script>
 export default {
   props: ["upload"],
-
+    data() {
+        return {
+           fileName:null,
+        };
+    },
   methods: {
+      doTheAxios(type,id){
+        this.$axios.get(`v1/user/getFileNameAndFormat/${type}/${id}`).then((res)=>{
+            if(res.data.status==1){
+                this.fileName=res.data.fileName;
+                this.downloadFile(type,id);
+            }else{
+                this.$toasted.info(res.data.msg, {
+                    position: "bottom-left",
+                    duration: 5000,
+                });
+            }
+        }).catch((err)=>{
+            console.log(err,'error is here')
+        })
+      },
+      async downloadFile(type,id) {
+          console.log('Rian codes are running')
+          try {
+              const response = await this.$axios.get('v1/user/getDownloadByFormat/'+type+'/'+id, {
+                  responseType: 'blob' // Specify the response type as blob to handle binary data
+              });
+              console.log(response,'response is here guys')
+              console.log(response.data,'response data is here guys')
+              const url = window.URL.createObjectURL(new Blob([response.data]));
+              const link = document.createElement('a');
+              link.href = url;
+              link.setAttribute('download', this.fileName);
+              document.body.appendChild(link);
+              link.click();
+              window.URL.revokeObjectURL(url);
+          } catch (error) {
+              console.error('Error downloading file:', error);
+          }
+      },
     async deleteFile(id) {
       try {
         await this.$store.dispatch("uploads/deleteUpload", id);
